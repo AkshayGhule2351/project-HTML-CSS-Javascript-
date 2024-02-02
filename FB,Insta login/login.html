@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 40%;
+            display: block;
+
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+
+        }
+        form{
+           margin-left: 40%;
+        }
+        h1{
+            background-color: #f1f1f1;
+           text-align: center;
+        }
+        input[type=submit]{
+            background-color: aqua;
+            
+        }
+        .container{
+            background-color: #f1f1f1;
+            padding: 20px;
+
+        }
+        #message{
+            display: none;
+            color: #000;
+            position: relative;
+            padding: 20px;
+            margin-top: 10px;
+            margin-left: 40%;
+
+        }
+        #m{
+            background-color: #f1f1f1;
+
+        }
+        #message p{
+            padding: 10px 35px;
+            font-size: 18px;
+        }
+        .Invalid{
+            color: red;
+        }
+        .Invalid::before{
+            position: relative;
+            left: -25px;
+            content: "X";
+        }
+        .valid{
+            color: green;
+        }
+        .valid::before{
+            position: relative;
+            left: -25px;
+            content: "✔";
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1><p>FB,Instagram Login Form:-</p></h1>
+    <div class="container">
+        <form action="#">
+        
+            <input type="text" name="username" id="username" placeholder="UserName" required>
+
+            <input type="password" name="password" id="password" placeholder="Password" pattern=/[\W_]+|[A-Z]+|[a-z]+|\d+/g; title="must containat least one number and one uppercase or lowercase and special symbol letter" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <div id="m">
+    <div id="message">
+        <h2>Password must Contain the following Condition:</h2>
+        <p id="letter" class="Invalid">A lower case letter</p>
+        <p id="capital" class="Invalid">A capital latter</p>
+        <p id="number" class="Invalid">A number </p>
+        <p id="symbol" class="Invalid">special Symbol </p>
+        <p id="length" class="Invalid">Minimum 15 charachater</p>
+    </div>
+</div>
+    <script>
+        var myInput = document.getElementById("password");
+        var letter= document.getElementById("letter");
+        var capital= document.getElementById("capital");
+        var number= document.getElementById("number");
+        var symbol= document.getElementById("symbol");
+        var length= document.getElementById("length");
+
+        myInput.onfocus=function(){
+            document.getElementById("message").style.display='block'
+        }
+        myInput.onblur=function(){
+            document.getElementById("message").style.display='none'
+        }
+        myInput.onkeyup=function(){
+            // lowerCase
+            var lowerCaseLetter=/[a-z]/g;
+            if(myInput.value.match(lowerCaseLetter)){
+                letter.classList.remove("Invalid");
+                letter.classList.add("valid");
+            }
+            else{
+                letter.classList.remove("valid");
+                letter.classList.add("Invalid");
+
+            }
+            // UppercaseLetter
+
+            var UpperCaseLetter=/[A-Z]/g;
+            if(myInput.value.match(UpperCaseLetter)){
+                capital.classList.remove("Invalid");
+                capital.classList.add("valid");
+            }
+            else{
+                capital.classList.remove("valid");
+                capital.classList.add("Invalid");
+
+            }
+            // Number validation
+            var numberFormat=/[0-9]/g;
+            if(myInput.value.match(numberFormat)){
+                number.classList.remove("Invalid");
+                number.classList.add("valid");
+            }
+            else{
+                number.classList.remove("valid");
+                number.classList.add("Invalid");
+
+            }
+            // validate length
+            if(myInput.value.length>15){
+                length.classList.remove("Invalid");
+                length.classList.add("valid");
+
+            }
+            else{
+                length.classList.remove("valid");
+                length.classList.add("Invalid");
+
+            }
+            // special symbol
+            var specialSymbol=/[\W]/g;
+            if(myInput.value.match(specialSymbol)){
+                symbol.classList.remove("Invalid");
+                symbol.classList.add("valid");
+            }
+            else{
+                symbol.classList.remove("valid");
+                symbol.classList.add("Invalid");
+
+            }
+        }
+    </script>
+</body>
+</html>

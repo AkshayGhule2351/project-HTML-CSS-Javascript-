@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns and orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h1{
+        text-align: center;
+        }
+        body{
+            background-color: rgb(177, 217, 229);
+        }
+        form{
+            background-color:white;
+            text-align: center;
+            
+            margin-left: 30%;
+            margin-right: 30%;
+            border: 2px solid black;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            margin-top: 5%;
+        }
+      #button1{
+            background-color: rgb(236, 245, 121);
+            cursor: pointer;
+            width: 20%;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            
+        }
+        #button1:hover{
+            color: blue;
+        }
+        input.uName{
+            width:250px ;
+            height:30px ;
+        }
+      
+    </style>
+    <script>
+        function validateForm(){
+            const userName=document.myForm.userName.value;
+            const password=document.myForm.password.value;
+            const confirmPassword=document.myForm.confirmPassword.value;
+            if(userName == "" || userName==null){
+                alert("Field Must be Filled out");
+                return false;
+
+            }
+            if(password.length<=5 ||password.length>=10 ){
+                alert("Password Must be at list 5 to 10 characters long");
+                return false;
+
+            }
+            if(password == confirmPassword){
+                return true;
+
+            }
+            else{
+                alert("Both Password Must be same");
+                return false;
+            }
+           
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Return Orders</h1>
+    <form action="D:\CSS240723\Classpractice\HTML and CSS\classfilehovercontent.html" name="myForm" method="post" onsubmit="return validateForm()">
+        User Name: <input class="uName" type="text" name="userName" placeholder="Enter Name here.." required>
+        <br><br>
+        password: <input class="uName" type="password" name="password" placeholder="Enter Password here.." required>
+        <br><br>
+        password: <input class="uName" type="password" name="confirmPassword" placeholder="ReEnter Password " id="" required>
+        <br><br>
+        <input type="Submit" id="button1" value="Login" placeholder="Password">
+        <h3>OR</h3>
+        <div class="logos">
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-square-instagram fa-shake fa-2xl" style="color: #db0646;"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-shake fa-2xl" style="color: #2502d4;"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-shake fa-2xl" style="color: #3d10e0;"></i></a>
+        </div>
+    </form>
+    
+</body>
+</html>

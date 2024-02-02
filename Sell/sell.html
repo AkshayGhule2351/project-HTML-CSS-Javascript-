@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: #bec8d3;
+      }
+      .navbar {
+        border: 2px solid white;
+        background-color: rgb(245, 243, 243);
+        margin-bottom: 20px;
+      }
+      .nav p {
+        color: black;
+        font-size: 28px;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+      }
+      .nav {
+        display: flex;
+        margin-left: 20%;
+      }
+      .button1 {
+        margin-left: 57%;
+      }
+      .button1 #Buttons {
+        text-align: center;
+        cursor: pointer;
+        color: rgb(13, 8, 1);
+        margin-top: 20px;
+        background-color: #ff9900;
+        font-size: 25px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .hero .img {
+        background-image: url(images.jpeg);
+        width: 100%;
+        height: 200px;
+      }
+      .sell {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .box {
+        padding-left: 10px;
+        background-color: white;
+        color: rgb(4, 4, 4);
+        width: 30%;
+        height: 200px;
+      }
+      .middle {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .heading {
+        margin-top: 20px;
+        padding-left: 5px;
+        font-size: x-large;
+        font-weight: 900;
+        color: rgb(8, 9, 9);
+        background-color: white;
+      }
+      .heading h3 {
+        font-size: large;
+        font-weight: 300;
+      }
+
+      /* footer */
+      footer {
+        margin-top: 15px;
+      }
+      .footer-panel1 {
+        background-color: #37475a;
+        color: white;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.85rem;
+        cursor: pointer;
+      }
+      .footer-panel2 {
+        background-color: #222f3d;
+        color: white;
+        height: 300px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      ul {
+        margin-top: 10px;
+      }
+      ul a {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 10px;
+        color: #dddddd;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      ul a:hover {
+        text-decoration-line: underline;
+      }
+
+      .footer-panel3 {
+        background-color: #222f3d;
+        border-top: 0.1px solid white;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flogo {
+        background-image: url("a\ \(2\).png");
+        height: 50px;
+        width: 210px;
+        background-size: cover;
+        cursor: pointer;
+      }
+      .footer-icon {
+        margin-left: 30px;
+        border: 0.5px solid white;
+        background-color: #222f3d;
+        color: white;
+        cursor: pointer;
+      }
+      .footer-icon i {
+        font-size: small;
+      }
+      .footer-icon #b1 {
+        text-decoration: none;
+        background-color: #222f3d;
+        color: white;
+        border: none;
+      }
+      .footer-country {
+        background-color: #222f3d;
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
+      .footer-country a {
+        margin-left: 15px;
+        font-size: 0.75rem;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      .footer-country a:hover {
+        text-decoration: underline;
+      }
+      /* last */
+      .footer-last {
+        background-color: #021326f0;
+      }
+      .sample {
+        display: flex;
+        cursor: pointer;
+        line-height: 7px;
+        justify-content: space-evenly;
+        margin-left: 20px;
+        margin-bottom: 30px;
+      }
+
+      .footer-last .sample p {
+        font-size: 0.75rem;
+        color: white;
+      }
+      .footer-last .sample p:hover {
+        text-decoration: underline;
+      }
+      .footer-last .sample a {
+        font-size: 0.6rem;
+        color: #e2e7e6;
+      }
+      .footer-last .sample p a:hover {
+        text-decoration: underline;
+      }
+      /* footer-end */
+      .footer-end .end1 {
+        padding-top: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 0.85rem;
+      }
+      .footer-end .end2 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 0.85rem;
+        padding-bottom: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav">
+        <p>Sell on Akshay</p>
+        <div class="button1">
+         <a href="file:///D:/CSS240723/Classpractice/project/todaysdeals/todays%20deals.html"> <input id="Buttons" type="button" value="Start Selling" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="img"></div>
+    </div>
+    <h1>Why sell on Akshay?</h1>
+    <div class="sell">
+      <div class="box1 box">
+        <h2>Receive timely payments</h2>
+        <p>
+          Akshay ensures your payments are deposited directly in your bank
+          account within 7-14 days.
+        </p>
+      </div>
+      <div class="box2 box">
+        <h2>Reach crores of customers</h2>
+        <p>
+          Sell to crores of engaged customer visiting Akshay.in on desktop and
+          through our mobile app.
+        </p>
+      </div>
+      <div class="box3 box">
+        <h2>Stress-free delivery</h2>
+        <p>
+          Deliver to 100% of India's serviceable pincodes, through Easy Ship &
+          Fulfillment by Akshay
+        </p>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="heading">
+        <p>
+          Since last year, my business on Akshay has grown more than 9 times
+        </p>
+        <h2>Priya Shinde</h2>
+        <h3>Tied Ribbons (Akshay Seller)</h3>
+      </div>
+    </div>
+<!-- footer -->
+    <footer>
+      <div class="footer-panel1">Back to Top</div>
+      <div class="footer-panel2">
+        <ul>
+          <p>Get to know</p>
+          <a href="">Careers</a>
+          <a href="">Blog</a>
+          <a href="">About US</a>
+          <a href="">Invester Relation</a>
+          <a href="">Akshay Devices</a>
+          <a href="">Akshay science</a>
+        </ul>
+
+        <ul>
+          <p href="">Connect with Us</p>
+          <a href="">Facebooks</a>
+          <a href="">Twitter</a>
+          <a href="">Instagram</a>
+        </ul>
+
+        <ul>
+          <p>Make Money with Us</p>
+          <a href="">Sell on Akshay</a>
+          <a href="">Sell under Akshay Accelerator</a>
+          <a href="">Protect and Build Your Brand</a>
+          <a href="">Akshay Global Selling</a>
+          <a href="">Become an Affiliate</a>
+          <a href="">Fulfilment by Akshay</a>
+          <a href="">Advertise Your Products</a>
+          <a href="">Akshay Pay on Merchants</a>
+        </ul>
+
+        <ul>
+          <p>Let Us Help You</p>
+          <a href="">COVID-19 and Akshay</a>
+          <a href="">Your Account</a>
+          <a href="">Returns Centre</a>
+          <a href="">100% Purchase Protection</a>
+          <a href="">Akshay App Download</a>
+          <a href=""> Help</a>
+        </ul>
+      </div>
+
+      <div class="footer-panel3">
+        <div class="flogo"></div>
+        <div class="footer-icon">
+          <i class="fa-solid fa-globe"></i>
+          <select id="b1">
+            <option value="">English</option>
+            <option value="">Hindi</option>
+            <option value="">Marathi</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-country">
+        <a>Australia</a>
+        <a>Brazil</a>
+        <a>Canada</a>
+        <a>China</a>
+        <a>France</a>
+        <a>Germany</a>
+        <a>Italy</a>
+        <a>Mexico</a>
+        <a>Netherlands</a>
+        <a>Poland</a>
+        <a>Spain</a>
+        <a>Turkey</a>
+        <a>United Arab Emirates</a>
+        <a>United State</a>
+      </div>
+    </footer>
+    <div class="footer-last">
+      <div class="sample">
+        <ul>
+          <p>AbeBooks</p>
+          <a>Books, art</a>
+          <a>footer-last</a>
+        </ul>
+        <ul>
+          <p>Akshay Web Services</p>
+          <a>Scalable Cloud</a>
+          <a>Computing Services</a>
+        </ul>
+        <ul>
+          <p>Audible</p>
+          <a>Download</a>
+          <a>Audio Books</a>
+        </ul>
+        <ul>
+          <p>DPReview</p>
+          <a> Digital</a>
+          <a>Digital Photographys</a>
+        </ul>
+        <ul>
+          <p>IMDb</p>
+          <a> Movies, TV</a>
+          <a>& Celebrities</a>
+        </ul>
+      </div>
+
+      <div class="footer-end">
+        <div class="end1">
+          <p>Conditions of Use & Sale</p>
+          <p>Privacy Notice</p>
+          <p>Interest-Based Ads</p>
+        </div>
+        <div class="end2">
+          <p>&#169; 1996-2023, Akshay.com, Inc. or its affiliates</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

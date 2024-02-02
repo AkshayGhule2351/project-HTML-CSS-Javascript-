@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+  </head>
+  <style>
+    body {
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position:center;
+    }
+    .portfolio {
+      font-size: xx-large;
+      border-bottom: 1px solid rgb(176, 169, 169);
+      display: flex;
+      align-items: center;
+      height: 75px;
+     
+    }
+    .portfolio .list ul {
+      margin-left: 40px;
+      font-size: x-large;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      width: 100%;
+      justify-content: space-around;
+    }
+    .portfolio .list ul li:hover {
+      color: blue;
+    }
+    .portfolio .list ul a {
+      list-style-type: none;
+      text-decoration: none;
+    }
+    .portfolio .list ul a li {
+      color: black;
+      padding: 20px;
+      text-decoration: none;
+    }
+    .portfolio .name2 {
+      color: red;
+    }
+    .portfolioName {
+      margin: 10%;
+    }
+    .portfolioName .n1 {
+      font-size: 38px;
+      font-weight: 500;
+    }
+    .portfolioName .n2 {
+      font-size: 60px;
+      font-weight: 700;
+    }
+    .portfolioName .n3 {
+      display: flex;
+      font-size: 42px;
+      font-weight: 500;
+    }
+    #b1 {
+      margin-top: 20px;
+      color: white;
+      cursor: pointer;
+      background-color: rgb(11, 190, 190);
+      font-size: 20px;
+      border-radius: 50px;
+      padding: 10px;
+      border: none;
+     
+    }
+    #element{
+        font-size: 25px;
+        color: red;
+    }
+  </style>
+  <body>
+    <div class="portfolio">
+      <div class="name1">A</div>
+      <div class="name2">kshay.</div>
+      <div class="list">
+        <ul>
+          <a href=""><li>Home</li></a>
+          <a href=""><li>About</li></a>
+          <a
+            href="file:///D:/CSS240723/Classpractice/project/todaysdeals/todays%20deals.html"
+            target="_blank"
+            ><li>Service</li></a
+          >
+          <a
+            href="file:///D:/IEC,PUNE/Classpractice/project(HTML,CSS,JS)/port/skill.html"
+            target="_blank"
+          >
+            <li>Skills</li></a
+          >
+          <a href="file:///D:/IEC,PUNE/Classpractice/project(HTML,CSS,JS)/port/captcha.html" target="_blank"><li>Captcha</li></a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="portfolioName">
+      <div class="n1">Hello,my name is</div>
+      <div class="n2">Akshay Ghule!</div>
+      <div class="n3">And</div>
+
+      <span id="element"></span>
+     <div>
+        <a href="file:///D:/IEC,PUNE/Classpractice/project(HTML,CSS,JS)/index1/index.html" target="_blank">
+          <input id="b1" type="button" value="My Work"/></a>
+      </div>
+    </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <script>
+        var typed = new Typed("#element", {
+          strings: ["<i>   I'am Engineer</div></i>", "&amp; a Web developer."],
+          typeSpeed: 90,
+        });
+      </script>
+      
+  </body>
+</html>
